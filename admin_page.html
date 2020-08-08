@@ -1,0 +1,24 @@
+<?php
+function get_b()
+{
+$str='';
+$btns=array(
+1=>'view_member',
+2=>'view_record',
+3=>'stock maintenance'
+);
+while(list($k,$v)=>each($btns))
+{
+$str.='<input type="submit" value="'.$v.'" name="btn_'.$k.'" id="btn_'.$k.'"/>';
+}
+return $str;
+}
+?>
+<html>
+<head><title>Admin Page</title></head>
+<body background="wall2.jpeg">
+<!--<button>View Member</button></br>
+<button><a href = "view_record.php">View Record</a></button></br>
+<button><a href = "stckmain.html">Stock Maintenance</a></button>-->
+</body>
+</html>

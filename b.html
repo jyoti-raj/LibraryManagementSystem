@@ -1,0 +1,91 @@
+<?php
+session_start();
+echo $SESSION['Email'];
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:#00ccff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+h1{
+font-size:60px;
+color:#0000e6;
+}
+p{
+font-size:30px;
+color:red;
+}
+body{
+background:url("img2.jpg");
+}
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="view_member.php">Membership</a>
+  <a href="https://www.google.com/search?q=books+for+engineering+course&rlz=1C1CHBF_enIN773IN773&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjqxoni7NvgAhUHQ48KHUR3C3gQ_AUIDygC&biw=1366&bih=625">Books</a>
+  <a href="stckmain.php">Add Books</a>
+  <a href="issue.php">Lending</a>
+  <a href="return.php">Returning</a>
+  <a href="view_record.php">View Records</a>
+  <a href = "admin.html">Admin</a>
+</div>
+
+<h1 align="center"><b>Library management system</b></h1>
+<p align="center"><b><i><u>Click on the element below to open the side navigation menu.</u></i></b></p>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+   
+</body>
+</html> 

@@ -1,0 +1,45 @@
+<!Doctype html>
+<html>
+<head>
+<title>
+Reset password
+</title>
+<link href="res.css" rel="stylesheet">
+</head>
+<body>
+<!--<script>
+function fun(){
+var a = document.getElementById('pass').value;
+var b = document.getElementById('rpass').value;
+if(a == ''){
+document.getElementById('pass').innerHTML="**fill it";
+return false;
+}
+if(a!=b)
+{
+doucment.getElementById('m').innerHTML="PAssword not same";
+return false;
+}
+</script>-->
+<div class="reset-box">
+<form action = "res.html" method = 'POST'>
+<h1 align="center">Reset Password</h1>
+<table align="center" cellspacing="20px">
+<tr><td><input type="password" name = "pass" value="pass" required placeholder="Enter your password"/></td></tr>
+<tr><td><input type="password" name = "rpass"  value="rpass" required placeholder="Repeat Password"/></td></tr><br/><br/>
+<tr><td><input type="submit"  name = "Submit" value="Submit" /></td></tr>
+</table>
+</form>
+</div>
+</body>
+</html>
+
+<?php
+if(isset($_POST['Submit'])){
+$a = $_POST['pass'];
+$b = $_POST['rpass'];
+if($a == $b){
+echo "Sucess";}
+}
+?>
+

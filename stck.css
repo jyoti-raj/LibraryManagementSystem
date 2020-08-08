@@ -1,0 +1,20 @@
+table input{
+	width:200px;
+	height:30px;
+
+}
+input[type="button"]
+{
+	width:120px;
+	color:white;
+	font-size:20px;
+	background-color:black;
+	border-radius:20px;
+}
+input[type="button"]:hover
+{
+	cursor:pointer;
+	background-color:red;
+}
+
+	

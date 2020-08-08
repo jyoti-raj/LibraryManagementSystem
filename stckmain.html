@@ -1,0 +1,44 @@
+<html>
+<head>
+<link href="stck.css" rel="stylesheet">
+</head>
+<body background="img.jpeg" text="red">
+<form action = "stckmain.html" method = 'post'>
+<center>
+<font size="40px">
+<h><b>STOCK MAINTENANCE</b></h></font>
+<table align="center" cellspacing="10px">
+<tr><td>Book Name:</td><td><input type="text" name="Book Name" placeholder="Enter book name"></td></tr></br></br>
+<tr><td>Book Code:</td><td><input type="text" name="Book Code"placeholder="Enter Book code"></td></tr></br></br>
+<tr><td>Author:</td><td><input type="text" name="Author"placeholder="Enter Author"></td></tr></br></br>
+<tr><td>Date of Arrival:</td><td><input type="date" name="Date of Arrival"></td></tr></br></br>
+<tr><td>No.of Books:</td><td><input type="text" name="No.of Books"placeholder="Enter no of books"></td></tr></br></br>
+<tr><td>Subject Code:</td><td><input type="text" name="Subject Code"placeholder="Enter subject code"></td></tr></br></br>
+</table>
+<input type="button" value="ADD" name = "button">
+</center>
+</form>
+</body>
+</html>
+
+
+<?php
+	$conn = mysqli_connect("localhost","root","") or die("connection failed");
+	//echo 'connection sucess';
+	mysqli_select_db($conn,'membership') or die("no db found");
+	
+if(isset($_POST['button'])){
+$book_name = $_POST['book_name'];
+$book_code = $_POST['book_code'];
+$author = $_POST['author'];
+$DOA = $_POST['DOA'];
+$sub_code = $_POST['sub_code'];
+
+$sql = "INSERT INTO stmain(book_name,book_code,author,DOA,sub_code)  VALUES('$book_name','$book_code','$author','$DOA','$sub_code')";
+
+if(mysqli_query($conn,$sql)){
+	//header ("l.html");
+}
+}
+
+?>

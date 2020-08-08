@@ -1,0 +1,48 @@
+body{
+width:200px;
+height:30px;
+	font-size:20px;
+	color:black;
+	background:#ff1aff;
+	border:none;
+	border-radius:5px;
+	margin:50px;
+}
+input[type="submit"]:hover
+{
+cursor:pointer;
+background-color:pink;
+}
+h1{
+	color:blue;
+}
+input{
+	height:30px;
+	width:90%;
+	
+	font-size:15px;
+	border-radius:5px;
+	border:1px solid grey;
+	position:center-right;
+}
+.for-box{
+width:320px;
+height:420px;
+background:#273746;
+color:white;
+top:50%;
+left:50%;
+position:absolute;
+transform:translate(-50%,-50%);
+box-sizing:border-box;
+}
+
+button{
+	padding:10px;
+	font-size:15px;
+	color:black;
+	background:pink;
+	border:none;
+	border-radius:5px;
+	margin:50px;
+}
